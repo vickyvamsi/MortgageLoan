@@ -6,4 +6,5 @@ import com.mortgageloan.entity.Loan;
 
 public interface LoanRepo extends JpaRepository<Loan, Long>{
 
+		
 }

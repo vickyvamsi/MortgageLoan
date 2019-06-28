@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Mort_Loan_Details")
 public class Loan {
 	@Id
 	private Long loanNum;
@@ -14,7 +16,7 @@ public class Loan {
 	private double securityAmount;
 	@OneToOne
 	private Customer customer;
-	@ManyToOne
+	@OneToOne
 	private BankEmployee bankEmployee;
 	public Long getLoanNum() {
 		return loanNum;

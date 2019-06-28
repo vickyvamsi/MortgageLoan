@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="customer_details")
+@Table(name="Mort_cust_details")
 public class Customer {
 	
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -22,6 +22,7 @@ public class Customer {
 	private String custGen;
 	private String custMaritalSatus;
 	private int custCreditScore;
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	private Loan loan;
 	
@@ -81,8 +82,8 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "CustomerDetails [custId=" + custId + ", custName=" + custName + ", custMob=" + custMob + ", custAge="
-				+ custAge + ", custGen=" + custGen + ", custMaritalSatus=" + custMaritalSatus + ", custCreditScore="
+		return "Customer [custId=" + custId + ", custName=" + custName + ", custMob=" + custMob + ", custAge=" + custAge
+				+ ", custGen=" + custGen + ", custMaritalSatus=" + custMaritalSatus + ", custCreditScore="
 				+ custCreditScore + "]";
 	}
 	
